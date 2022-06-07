@@ -1,0 +1,22 @@
+<nav>
+    <div class="nav-wrapper">
+      <a href="/" class="brand-logo">Issues</a>
+      <ul id="nav-mobile" class="right hide-on-med-and-down">
+        {{#if user}}
+        <li>
+            <form method="POST" action="/login/logout">
+                <input type="submit" value="Logout" class="logout">
+            </form>
+        </li>
+        <li><a href="/issues">issues</a></li>
+        {{else}}
+        <li><a href="/login">Login</a></li>
+        {{/if}}
+      </ul>
+    </div>
+  </nav>
+  {{#if flash}}
+    <div class="card-panel {{flash.type}}">
+      {{flash.text}}
+    </div>
+  {{/if}}

@@ -1,0 +1,116 @@
+/* Variables */
+
+:root {
+    --bg-color-one: #001f3f;
+    --bg-color-two: #7FDBFF;
+    --text-color-one: #FFFFFF;
+    --text-color-two: #111111;
+    --date-text: #AAAAAA;
+}
+
+/* HTML */
+ body {
+    background-color: var(--bg-color-two);
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
+ }
+
+ main {
+    flex: 1 0 auto;
+  }
+
+
+/* Collapsible */
+
+.repoCol .collapsible-header {
+    background-color: var(--bg-color-one);
+    color: var(--text-color-one);
+    border-color: #7FDBFF;
+}
+
+.repoCol .collapsible-body {
+    background-color: var(--bg-color-two);
+    color: var(--text-color-two);
+    padding: 0px;
+}
+
+.infoSection {
+    background-color: #FFFFFF;
+    border-radius: 10px;
+    margin-top: 20px;
+    color: var(--text-color-two);
+}
+
+.infoSection hr {
+    border-top: 5px solid var(--bg-color-two);
+}
+
+.collapsible.repoCol {
+    border-left: none;
+    border-right: none;
+    border-top: none;
+}
+
+.collapsible-body .issueSection {
+    border-bottom: 2px solid var(--bg-color-one);
+    padding: 2rem;
+}
+
+.issueBox, .issueNotification {
+    display: inline-block;
+    width: 100%;
+}
+
+/* Info Container */
+
+.issueContainer {
+    background-color: green;
+}
+
+#issueComments blockquote {
+    background-color: #fcfcfc;
+    border-left: 5px solid var(--bg-color-two);
+    border-bottom: 5px solid var(--bg-color-two);
+    color: var(--text-color-two);
+    padding: 30px;
+}
+
+.infoSection .chip {
+    background-color: #DDDDDD;
+}
+
+.hidden {
+    display: none;
+}
+
+/* FOOT + HEADER */
+
+footer.page-footer, nav .nav-wrapper {
+    background-color: #001f3f;
+}
+
+.newIssue {
+    color: var(--bg-color-two);
+}
+
+/* Comments */
+
+.commentDate {
+    color: var(--date-text);
+    font-style: oblique;
+}
+
+/* LOGIN */
+
+
+.loginForm {
+    margin-top: 20px;
+    background-color: var(--bg-color-one);
+    border-radius: 15px;
+    color: var(--bg-color-two);
+}
+
+.loginText {
+    color: var(--bg-color-two);
+}

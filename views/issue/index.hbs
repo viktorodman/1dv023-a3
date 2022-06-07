@@ -1,0 +1,44 @@
+<div>
+    <div class="row">
+        <div class="col s2">
+            <ul class="collapsible repoCol">
+                {{#each viewData.repos}}
+                    <li id="project{{repoID}}">
+                        <div class="collapsible-header">
+                            {{repoName}} {{course}}
+                            <i class="tiny material-icons right-align newIssue hide">announcement</i>
+                            <br>
+                        </div>
+                        <div class="collapsible-body">
+                            {{#each issueNames}}
+                                <div class="issueSection" id="issue{{issueID}}">
+                                    <div class="issueNotification">
+                                        <span class="new badge hide" data-badge-caption="New Issue"></span>
+                                    </div>
+                                    <div class="issueBox">
+                                        <span class="issueTitle">{{title}}</span>
+                                        <input class="pID" type="hidden" name="projectID" value="{{projectID}}">
+                                        <input class="iID" type="hidden" name="issueID" value="{{issueID}}">
+                                        <br>
+                                        <a class="btn-small issueButton indigo darken-4">Show Issue</a>
+                                    </div>
+                                </div>
+                                {{else}}
+                                <div>
+                                    <p class="noIssue">No issues found...</p>
+                                </div>
+                            {{/each}}
+                        </div>
+                    </li>
+                {{/each}}
+            </ul>
+        </div>
+        <div class="col s1"></div>
+        <div class="col s8 infoSection z-depth-3">
+            <h1>Select an issue</h1>
+        </div>
+    </div>
+</div>
+
+<script src="/js/socketConnection.js"></script>
+
